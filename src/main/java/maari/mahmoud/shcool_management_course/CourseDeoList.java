@@ -6,13 +6,25 @@ import java.util.List;
 
 public class CourseDeoList implements CourseDeo {
 	
-	private static List<Course> courses;
-	Course m= new Course();
+	
 
+	private static List<Course> courses=new ArrayList<>();
+	
+	
+
+	
 	@Override
-	public Course saveCourse(Course course) {
-		courses.add(course);
+	public Course saveCourse(Course course) throws IllegalArgumentException {
+		if(course == null) {
+			throw new IllegalArgumentException();
+		}
+		if (findById(course.getCourseId())!=null){
+			throw new IllegalArgumentException("Object with same id exists in storage");
+		}else {
+	
+	   courses.add(course);
 		return course;
+		}
 	}
 
 	@Override
@@ -29,11 +41,12 @@ public class CourseDeoList implements CourseDeo {
 	@Override
 	public List<Course> findByName(String name) {
 		List<Course> result = new ArrayList<>();
-	    List<Course> c = new ArrayList<>();
+	    
 		for(Course e : courses) {
-			c = (List<Course>) e;
-			if(e.getCourseName() == name) {
-				return  c ;
+			
+			if(e.getCourseName().equalsIgnoreCase(name)) {
+				result.add(e);
+				
 			}
 		}
 		
@@ -42,20 +55,26 @@ public class CourseDeoList implements CourseDeo {
 
 	@Override
 	public List<Course> findBuDate(LocalDate date) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Course> result = new ArrayList<>();
+		
+		for(Course c: courses) {
+			if(c.getStartdate().equals(date)) {
+				result.add(c);
+			}
+		}
+		return result;
 	}
 
 	@Override
 	public List<Course> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return getCourses();
 	}
 
 	@Override
 	public boolean removeCourse(Course course) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return courses.remove(course);
 	}
 
 	public static List<Course> getCourses() {
@@ -66,4 +85,7 @@ public class CourseDeoList implements CourseDeo {
 		CourseDeoList.courses = courses;
 	}
 
+	public static void clear() {
+		courses.clear();
+	}
 }

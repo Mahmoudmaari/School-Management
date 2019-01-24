@@ -2,22 +2,81 @@ package maari.mahmoud.shcool_management;
 
 
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import maari.mahmoud.shcool_management_course.*;
 
 public class CourseTest {
  
-	 
-	List<Course> courses= new ArrayList<>();
-	CourseDeo m = new CourseDeoList();
-	@Test
-	public void coursetest() {
+	private CourseDeo undertest = new CourseDeoList() ;
 	
+	private Course coursetest;
+	private int courseId;
+	
+	@Before
+	public void init() {
+	
+		coursetest = new Course(0,"lal",LocalDate.of(2019, 2, 10),10);
+		 undertest.saveCourse(coursetest);
+		courseId = coursetest.getCourseId();
+		undertest.saveCourse(new Course(2, "test", LocalDate.of(2019, 2, 10), 20));
+	}
+	@After
+	public void clear() {
+		CourseDeoList.clear();
+		
+	}
+	
+	
+	@Test
+	public void courseSaveTest() {
+		Course expected =new Course(3, "ahmad",LocalDate.of(2019, 2, 5) , 10);
+		
+	    assertEquals(expected, undertest.saveCourse(expected));
 	
 		
+	}
+	@Test
+	public void findbyId() {
+		assertEquals(coursetest, undertest.findById(courseId));
+	}
+	@Test
+	public void findbyName() {
+		String name = "lal";
+		List<Course> result = undertest.findByName(name);
+		for (Course c : result) {
+			
+		assertEquals(name, c.getCourseName());
+		}
+	}
+	@Test
+	public void findByDeta() {
+		LocalDate date = LocalDate.of(2019, 2, 10);
+		List<Course> result= undertest.findBuDate(date);
+		for (Course c : result) {
+			assertEquals(date, c.getStartdate());
+		}
+	}
+	@Test
+	public void findall() {
+		List<Course> result = undertest.findAll();
+		
+		assertEquals(CourseDeoList.getCourses(), result);
+		
+		
+	}
+	@Test
+	public void removeCourse() {
+		boolean run= undertest.removeCourse(coursetest);
+		 assertTrue(run);
 	}
 }

@@ -1,6 +1,7 @@
 package maari.mahmoud.shcool_management_course;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import School_management.*;
@@ -11,7 +12,19 @@ public  class Course{
 	private String courseName;
 	private LocalDate startdate;
 	private int weekduration;
-	private List <Student> students;
+	private List <Student> students=new ArrayList<>();
+	
+	
+	
+	public Course(int id,String courseName,LocalDate date,int weekduration) {
+	
+		this.courseId=id;
+		this.courseName= courseName;
+		this.startdate=date;
+		this.weekduration=weekduration;
+	
+	   
+	}
 	
 	public int getCourseId() {
 		return courseId;
@@ -41,14 +54,18 @@ public  class Course{
 		return students;
 	}
 	public void setStudents(List<Student> students) {
+
 		this.students = students;
 	}
 
+	
 	public void register(Student students) {
+		
 		
 	}
 	
 	public void unregister(Student students) {
 		
 	}
+	
 }
