@@ -1,6 +1,8 @@
-package School_management;
+package maari.mahmoud.shcool_management.data;
 
 import java.util.List;
+
+import maari.mahmoud.shcool_management.model.Student;
 
 public interface StudentDao {
 	String schoolName="wasa";

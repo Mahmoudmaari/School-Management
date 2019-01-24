@@ -1,7 +1,9 @@
-package School_management;
+package maari.mahmoud.shcool_management.data;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import maari.mahmoud.shcool_management.model.Student;
 
 public class Student_Dao_List implements StudentDao{
 

@@ -13,7 +13,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import maari.mahmoud.shcool_management_course.*;
+import maari.mahmoud.shcool_management.data.*;
+import maari.mahmoud.shcool_management.model.Course;
 
 public class CourseTest {
  

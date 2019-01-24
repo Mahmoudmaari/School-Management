@@ -1,10 +1,10 @@
-package maari.mahmoud.shcool_management_course;
+package maari.mahmoud.shcool_management.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import School_management.*;
+
 
 
 public  class Course{

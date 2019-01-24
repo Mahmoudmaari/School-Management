@@ -1,8 +1,10 @@
-package maari.mahmoud.shcool_management_course;
+package maari.mahmoud.shcool_management.data;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import maari.mahmoud.shcool_management.model.Course;
 
 public class CourseDeoList implements CourseDeo {
 	

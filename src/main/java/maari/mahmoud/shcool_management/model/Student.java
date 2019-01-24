@@ -1,4 +1,4 @@
-package School_management;
+package maari.mahmoud.shcool_management.model;
 
 public class Student {
 	
