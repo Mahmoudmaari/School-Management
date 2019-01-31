@@ -7,6 +7,9 @@ import java.util.List;
 import maari.mahmoud.shcool_management.model.Course;
 
 public class CourseDaoList implements CourseDao {
+	/*
+	 * made by Mahmoud
+	 */
 
 	private static List<Course> courses = new ArrayList<>();
 
@@ -38,7 +41,6 @@ public class CourseDaoList implements CourseDao {
 			}
 		}
 
-		
 		return null;
 	}
 

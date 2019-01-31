@@ -8,13 +8,16 @@ import maari.mahmoud.shcool_management.data.*;
 import maari.mahmoud.shcool_management.model.Course;
 
 public class CourseTest {
+	/*
+	 * made by Mahmoud
+	 */
 
 	private CourseDao undertest = new CourseDaoList();
 	private Course coursetest;
 	private int courseId;
 
 	@Before
-	//before operating a test
+	// before operating a test
 	public void init() {
 		coursetest = new Course(0, "lal", LocalDate.of(2019, 2, 10), 10);
 		undertest.saveCourse(coursetest);
@@ -26,7 +29,6 @@ public class CourseTest {
 	// operates after operating a test
 	public void clear() {
 		CourseDaoList.clear();
-		
 
 	}
 

@@ -7,7 +7,9 @@ import maari.mahmoud.shcool_management.model.Course;
 import maari.mahmoud.shcool_management.model.Student;
 
 public class Student_Dao_List implements StudentDao {
-
+	/*
+	 * made by Falak
+	 */
 	private static List<Student> students = new ArrayList<>();
 
 	@Override
@@ -20,6 +22,7 @@ public class Student_Dao_List implements StudentDao {
 			// for each element of the list "students",bring its id and test it ,
 			// if this object which has null id =null then add new student
 			students.add(student);
+			return student;
 		} else
 			System.out.println("id is existed");
 		return student;
@@ -41,7 +44,6 @@ public class Student_Dao_List implements StudentDao {
 		return null;
 
 	}
-	
 
 	@Override
 	public List<Student> findByName(String name) {

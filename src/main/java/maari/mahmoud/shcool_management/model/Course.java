@@ -8,7 +8,10 @@ import maari.mahmoud.shcool_management.data.StudentDao;
 import maari.mahmoud.shcool_management.data.Student_Dao_List;
 
 public class Course {
-	
+	/*
+	 * made by Mahmoud
+	 */
+
 	private int courseId;
 	private String courseName;
 	private LocalDate startdate;
@@ -16,15 +19,15 @@ public class Course {
 	private List<Student> students = new ArrayList<>();
 
 	public Course() {
-		
+
 	}
+
 	public Course(int id, String courseName, LocalDate date, int weekduration) {
 
 		this.courseId = id;
 		this.courseName = courseName;
 		this.startdate = date;
 		this.weekduration = weekduration;
-		
 
 	}
 
@@ -39,7 +42,7 @@ public class Course {
 	@Override
 	public String toString() {
 		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", startdate=" + startdate
-				+ ", weekduration=" + weekduration + ", students=" + students + "]"+"\n";
+				+ ", weekduration=" + weekduration + ", students=" + students + "]" + "\n";
 	}
 
 	public String getCourseName() {
@@ -70,18 +73,19 @@ public class Course {
 		return students;
 	}
 
-	public void setStudents(List<Student> students) {
+	public List<Student> setStudents(List<Student> students) {
 
-		this.students = students;
+		return this.students = students;
 	}
 
-	public void register(Student students) {
+	public List<Student> register(Student students) {
 		getStudents().add(students);
-
+		return getStudents();
 	}
 
-	public void unregister(Student students) {
+	public List<Student> unregister(Student students) {
 		getStudents().remove(students);
+		return getStudents();
 
 	}
 

@@ -6,7 +6,9 @@ import java.util.*;
 import maari.mahmoud.shcool_management.model.Course;
 
 public interface CourseDao {
-
+	/*
+	 * made by Mahmoud
+	 */
 	Course saveCourse(Course course);
 
 	Course findById(int id);
@@ -18,6 +20,5 @@ public interface CourseDao {
 	List<Course> findAll();
 
 	boolean removeCourse(Course course);
-	
 
 }

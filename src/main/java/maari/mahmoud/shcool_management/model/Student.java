@@ -1,7 +1,9 @@
 package maari.mahmoud.shcool_management.model;
 
 public class Student {
-
+	/*
+	 * made by Falak
+	 */
 	private int id;
 	private String name;
 	private String email;
@@ -17,10 +19,14 @@ public class Student {
 		this.email = email;
 		this.address = address;
 	}
-	
 
 	public int getId() {
 		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + "]" + "\n";
 	}
 
 	public void setId(int id) {
@@ -31,24 +37,24 @@ public class Student {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String setName(String name) {
+		return this.name = name;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public String setEmail(String email) {
+		return this.email = email;
 	}
 
 	public String getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public String setAddress(String address) {
+		return this.address = address;
 	}
 
 }

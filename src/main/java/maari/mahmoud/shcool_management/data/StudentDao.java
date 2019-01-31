@@ -4,6 +4,9 @@ import java.util.List;
 
 import maari.mahmoud.shcool_management.model.Student;
 
+/*
+ * made by Falak
+ */
 public interface StudentDao {
 	String schoolName = "wasa";
 
@@ -18,5 +21,5 @@ public interface StudentDao {
 	boolean deleteStudent(Student student);
 
 	List<Student> findAll();
-	
+
 }
