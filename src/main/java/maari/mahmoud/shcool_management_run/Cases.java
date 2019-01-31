@@ -39,8 +39,8 @@ public class Cases {
 					+ "\nPress (3) to search course by name" + "\nPress (4) to search course by start date"
 					+ "\nPress (5) to show all courses" + "\nPress (6) to remove coures by ID"
 					+ "\nPress (7) to edit courses");
-			
-			switch (input= sc.nextLine()) {
+
+			switch (input = sc.nextLine()) {
 			case "1":
 				course = new Course(courseId++, in.Coursename(), LocalDate.of(in.year(), in.month(), in.day()),
 						in.weekduration());
@@ -53,7 +53,7 @@ public class Cases {
 				System.out.println(newCourse.findByName(in.Coursename()));
 				break;
 			case "4":
-				
+
 				System.out.println(newCourse.findBuDate(date.of(in.year(), in.month(), in.day())));
 				break;
 			case "5":
@@ -72,6 +72,7 @@ public class Cases {
 		}
 	}
 
+	
 	public void cases1() {
 		System.out.println("\nPress (1) to edit course name" + "\nPress (2) to edit course date"
 				+ "\nPress (3) to edit course week duration");

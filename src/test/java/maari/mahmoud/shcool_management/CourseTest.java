@@ -10,13 +10,11 @@ import maari.mahmoud.shcool_management.model.Course;
 public class CourseTest {
 
 	private CourseDao undertest = new CourseDaoList();
-	private StudentDao studnetTest = new Student_Dao_List();
 	private Course coursetest;
 	private int courseId;
 
 	@Before
 	public void init() {
-
 		coursetest = new Course(0, "lal", LocalDate.of(2019, 2, 10), 10);
 		undertest.saveCourse(coursetest);
 		courseId = coursetest.getCourseId();
@@ -26,6 +24,7 @@ public class CourseTest {
 	@After
 	public void clear() {
 		CourseDaoList.clear();
+		
 
 	}
 
