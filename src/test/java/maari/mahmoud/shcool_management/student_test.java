@@ -3,17 +3,14 @@ package maari.mahmoud.shcool_management;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import maari.mahmoud.shcool_management.data.CourseDeoList;
 import maari.mahmoud.shcool_management.data.StudentDao;
 import maari.mahmoud.shcool_management.data.Student_Dao_List;
-import maari.mahmoud.shcool_management.model.Course;
 import maari.mahmoud.shcool_management.model.Student;
 
 public class student_test {
