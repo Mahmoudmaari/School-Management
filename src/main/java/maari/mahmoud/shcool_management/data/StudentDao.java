@@ -12,5 +12,5 @@ Student findByEmail(String email);
 List<Student>findByName(String name); 
 Student findById(int id);
 boolean deleteStudent(Student student);
- Student findAll();
+ List<Student> findAll();
 }
