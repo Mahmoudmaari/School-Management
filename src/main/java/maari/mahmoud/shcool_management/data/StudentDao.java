@@ -18,4 +18,5 @@ public interface StudentDao {
 	boolean deleteStudent(Student student);
 
 	List<Student> findAll();
+	
 }

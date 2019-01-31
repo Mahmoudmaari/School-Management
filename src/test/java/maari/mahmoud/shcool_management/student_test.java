@@ -33,6 +33,7 @@ public class student_test {
 
 	@After
 	public void clear() {
+		
 		Student_Dao_List.clear();
 
 	}
