@@ -14,6 +14,7 @@ public class CourseTest {
 	private int courseId;
 
 	@Before
+	//before operating a test
 	public void init() {
 		coursetest = new Course(0, "lal", LocalDate.of(2019, 2, 10), 10);
 		undertest.saveCourse(coursetest);
@@ -22,6 +23,7 @@ public class CourseTest {
 	}
 
 	@After
+	// operates after operating a test
 	public void clear() {
 		CourseDaoList.clear();
 		
