@@ -1,5 +1,7 @@
 package maari.mahmoud.shcool_management;
 
+import maari.mahmoud.shcool_management_run.Cases;
+
 /**
  * Hello world!
  *
@@ -8,6 +10,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	
+        Cases run = new Cases();
+        run.cases();
     }
 }
