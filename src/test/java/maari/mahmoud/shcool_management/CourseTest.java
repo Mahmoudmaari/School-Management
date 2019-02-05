@@ -6,6 +6,7 @@ import java.util.List;
 import org.junit.*;
 import maari.mahmoud.shcool_management.data.*;
 import maari.mahmoud.shcool_management.model.Course;
+import maari.mahmoud.shcool_management.model.Student;
 
 public class CourseTest {
 	/*
@@ -15,6 +16,8 @@ public class CourseTest {
 	private CourseDao undertest = new CourseDaoList();
 	private Course coursetest;
 	private int courseId;
+	private Student student;
+	private List<Student> studenttest;
 
 	@Before
 	// before operating a test
@@ -79,7 +82,17 @@ public class CourseTest {
 	}
 
 	@Test
-	public void StudentTest() {
+	public void StudentRegisterTest() {
+		Student students= new Student(1, "test", "test@test.com", "test");
+		studenttest= coursetest.register(students);
+		assertEquals(studenttest, coursetest.getStudents());
+
+	}
+	@Test
+	public void StudentRemoveTest() {
+		Student students= new Student(1, "test", "test@test.com", "test");
+		studenttest= coursetest.unregister(students);
+		assertEquals(studenttest, coursetest.getStudents());
 
 	}
 }
