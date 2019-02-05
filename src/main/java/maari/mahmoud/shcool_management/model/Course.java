@@ -10,7 +10,7 @@ import maari.mahmoud.shcool_management.data.Student_Dao_List;
 public class Course {
 	/*
 	 * made by Mahmoud
-	 */
+	 */ 
 
 	private int courseId;
 	private String courseName;
